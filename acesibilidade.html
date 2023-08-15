@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Site Acessível</title>
+  <style>
+    /* Estilos do seu site */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      margin: 0 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Estilos para a lupa de zoom */
+    .zoom-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+    .zoom-increment,
+    .zoom-decrement {
+      font-size: 18px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exemplo de Site Acessível</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Página Inicial</a></li>
+      <li><a href="#">Sobre Nós</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Bem-vindo ao site!</h2>
+    <p>Teste</p>
+    <div class="image-container">
+      <img src="https://img.freepik.com/fotos-gratis/uma-imagem-de-um-planeta-com-um-buraco-negro-no-centro-e-um-buraco-negro-no-centro_1340-23795.jpg?w=1060&t=st=1690917911~exp=1690918511~hmac=557fbdb2711f986d8f893cf12e1efd5e943b5bf2b2c3f04d0c9922c1387f8929" alt="Um buraco negro">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Exemplo de Site Acessível.</p>
+  </footer>
+
+  <!-- JavaScript para a lupa de zoom -->
+  <script>
+    let zoomLevel = 1.0;
+
+    function zoomIn() {
+      zoomLevel += 0.1;
+      document.body.style.transform = `scale(${zoomLevel})`;
+    }
+
+    function zoomOut() {
+      zoomLevel -= 0.1;
+      document.body.style.transform = `scale(${zoomLevel})`;
+    }
+  </script>
+  
+  <div class="zoom-container">
+    <span class="zoom-increment" onclick="zoomIn()">+</span>
+    <span class="zoom-decrement" onclick="zoomOut()">-</span>
+  </div>
+</body>
+</html>
